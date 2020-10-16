@@ -65,7 +65,7 @@ const generate = () => {
         instances.push(new DataType1())
         instances.push(new DataType2())
         instances.push(new DataType3())
-        // instances.push(new DataType4())
+        instances.push(new DataType4())
     } while (instances.length < size)
 
     return instances
@@ -100,7 +100,7 @@ const access = BenchmarkC<DataType0[]>({
 })
 
 const run = async () => {
-    await instantiate.measureTillMaxTime()
+    // await instantiate.measureTillMaxTime()
     await access.measureTillMaxTime()
 }
 

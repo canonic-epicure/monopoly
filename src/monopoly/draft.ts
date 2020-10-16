@@ -14,6 +14,30 @@ const DataType0VTable = {
     prop0_2         : (host : DataType0) => host.prop0_2,
     prop0_3         : (host : DataType0) => host.prop0_3,
     prop0_4         : (host : DataType0) => host.prop0_4,
+
+    prop1_0_w       : (host : DataType1, value) => host.prop1_0 = value,
+    prop1_1_w       : (host : DataType1, value) => host.prop1_1 = value,
+
+    prop1_0         : (host : DataType1) => host.prop1_0,
+    prop1_1         : (host : DataType1) => host.prop1_1,
+
+    prop2_0_w       : (host : DataType2, value) => host.prop2_0 = value,
+    prop2_1_w       : (host : DataType2, value) => host.prop2_1 = value,
+
+    prop2_0         : (host : DataType2) => host.prop2_0,
+    prop2_1         : (host : DataType2) => host.prop2_1,
+
+    prop3_0_w       : (host : DataType3, value) => host.prop3_0 = value,
+    prop3_1_w       : (host : DataType3, value) => host.prop3_1 = value,
+
+    prop3_0         : (host : DataType3) => host.prop3_0,
+    prop3_1         : (host : DataType3) => host.prop3_1,
+
+    prop4_0_w       : (host : DataType4, value) => host.prop4_0 = value,
+    prop4_1_w       : (host : DataType4, value) => host.prop4_1 = value,
+
+    prop4_0         : (host : DataType4) => host.prop4_0,
+    prop4_1         : (host : DataType4) => host.prop4_1,
 }
 
 class DataType0 {
@@ -47,6 +71,24 @@ const DataType1VTable = {
 
     prop1_0         : (host : DataType1) => host.prop1_0,
     prop1_1         : (host : DataType1) => host.prop1_1,
+
+    prop2_0_w       : (host : DataType2, value) => host.prop2_0 = value,
+    prop2_1_w       : (host : DataType2, value) => host.prop2_1 = value,
+
+    prop2_0         : (host : DataType2) => host.prop2_0,
+    prop2_1         : (host : DataType2) => host.prop2_1,
+
+    prop3_0_w       : (host : DataType3, value) => host.prop3_0 = value,
+    prop3_1_w       : (host : DataType3, value) => host.prop3_1 = value,
+
+    prop3_0         : (host : DataType3) => host.prop3_0,
+    prop3_1         : (host : DataType3) => host.prop3_1,
+
+    prop4_0_w       : (host : DataType4, value) => host.prop4_0 = value,
+    prop4_1_w       : (host : DataType4, value) => host.prop4_1 = value,
+
+    prop4_0         : (host : DataType4) => host.prop4_0,
+    prop4_1         : (host : DataType4) => host.prop4_1,
 }
 
 class DataType1 extends DataType0 {
@@ -72,11 +114,29 @@ const DataType2VTable = {
     prop0_3         : (host : DataType2) => host.prop0_3,
     prop0_4         : (host : DataType2) => host.prop0_4,
 
+    prop1_0_w       : (host : DataType1, value) => host.prop1_0 = value,
+    prop1_1_w       : (host : DataType1, value) => host.prop1_1 = value,
+
+    prop1_0         : (host : DataType1) => host.prop1_0,
+    prop1_1         : (host : DataType1) => host.prop1_1,
+
     prop2_0_w       : (host : DataType2, value) => host.prop2_0 = value,
     prop2_1_w       : (host : DataType2, value) => host.prop2_1 = value,
 
     prop2_0         : (host : DataType2) => host.prop2_0,
     prop2_1         : (host : DataType2) => host.prop2_1,
+
+    prop3_0_w       : (host : DataType3, value) => host.prop3_0 = value,
+    prop3_1_w       : (host : DataType3, value) => host.prop3_1 = value,
+
+    prop3_0         : (host : DataType3) => host.prop3_0,
+    prop3_1         : (host : DataType3) => host.prop3_1,
+
+    prop4_0_w       : (host : DataType4, value) => host.prop4_0 = value,
+    prop4_1_w       : (host : DataType4, value) => host.prop4_1 = value,
+
+    prop4_0         : (host : DataType4) => host.prop4_0,
+    prop4_1         : (host : DataType4) => host.prop4_1,
 }
 
 class DataType2 extends DataType0 {
@@ -102,11 +162,29 @@ const DataType3VTable = {
     prop0_3         : (host : DataType3) => host.prop0_3,
     prop0_4         : (host : DataType3) => host.prop0_4,
 
+    prop1_0_w       : (host : DataType1, value) => host.prop1_0 = value,
+    prop1_1_w       : (host : DataType1, value) => host.prop1_1 = value,
+
+    prop1_0         : (host : DataType1) => host.prop1_0,
+    prop1_1         : (host : DataType1) => host.prop1_1,
+
+    prop2_0_w       : (host : DataType2, value) => host.prop2_0 = value,
+    prop2_1_w       : (host : DataType2, value) => host.prop2_1 = value,
+
+    prop2_0         : (host : DataType2) => host.prop2_0,
+    prop2_1         : (host : DataType2) => host.prop2_1,
+
     prop3_0_w       : (host : DataType3, value) => host.prop3_0 = value,
     prop3_1_w       : (host : DataType3, value) => host.prop3_1 = value,
 
     prop3_0         : (host : DataType3) => host.prop3_0,
     prop3_1         : (host : DataType3) => host.prop3_1,
+
+    prop4_0_w       : (host : DataType4, value) => host.prop4_0 = value,
+    prop4_1_w       : (host : DataType4, value) => host.prop4_1 = value,
+
+    prop4_0         : (host : DataType4) => host.prop4_0,
+    prop4_1         : (host : DataType4) => host.prop4_1,
 }
 
 class DataType3 extends DataType0 {
@@ -131,6 +209,24 @@ const DataType4VTable = {
     prop0_2         : (host : DataType4) => host.prop0_2,
     prop0_3         : (host : DataType4) => host.prop0_3,
     prop0_4         : (host : DataType4) => host.prop0_4,
+
+    prop1_0_w       : (host : DataType1, value) => host.prop1_0 = value,
+    prop1_1_w       : (host : DataType1, value) => host.prop1_1 = value,
+
+    prop1_0         : (host : DataType1) => host.prop1_0,
+    prop1_1         : (host : DataType1) => host.prop1_1,
+
+    prop2_0_w       : (host : DataType2, value) => host.prop2_0 = value,
+    prop2_1_w       : (host : DataType2, value) => host.prop2_1 = value,
+
+    prop2_0         : (host : DataType2) => host.prop2_0,
+    prop2_1         : (host : DataType2) => host.prop2_1,
+
+    prop3_0_w       : (host : DataType3, value) => host.prop3_0 = value,
+    prop3_1_w       : (host : DataType3, value) => host.prop3_1 = value,
+
+    prop3_0         : (host : DataType3) => host.prop3_0,
+    prop3_1         : (host : DataType3) => host.prop3_1,
 
     prop4_0_w       : (host : DataType4, value) => host.prop4_0 = value,
     prop4_1_w       : (host : DataType4, value) => host.prop4_1 = value,
