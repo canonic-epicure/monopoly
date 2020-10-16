@@ -119,6 +119,67 @@ class ClassAsArray extends Array {
 
 
 //------------------------------------------------------------------------------
+class ClassHasArray {
+
+    storage     : number[]      = new Array(10)
+
+    constructor () {
+        this.storage[ 0 ] = 0
+        this.storage[ 1 ] = 0
+        this.storage[ 2 ] = 0
+        this.storage[ 3 ] = 0
+        this.storage[ 4 ] = 0
+        this.storage[ 5 ] = 0
+        this.storage[ 6 ] = 0
+        this.storage[ 7 ] = 0
+        this.storage[ 8 ] = 0
+        this.storage[ 9 ] = 0
+    }
+
+
+    get field00 () { return this.storage[0] }
+    set field00 (value) { this.storage[0] = value}
+
+
+    get field01 () { return this.storage[1] }
+    set field01 (value) { this.storage[1] = value}
+
+
+    get field02 () { return this.storage[2] }
+    set field02 (value) { this.storage[2] = value}
+
+
+    get field03 () { return this.storage[3] }
+    set field03 (value) { this.storage[3] = value}
+
+
+    get field04 () { return this.storage[4] }
+    set field04 (value) { this.storage[4] = value}
+
+
+    get field05 () { return this.storage[5] }
+    set field05 (value) { this.storage[5] = value}
+
+
+    get field06 () { return this.storage[6] }
+    set field06 (value) { this.storage[6] = value}
+
+
+    get field07 () { return this.storage[7] }
+    set field07 (value) { this.storage[7] = value}
+
+
+    get field08 () { return this.storage[8] }
+    set field08 (value) { this.storage[8] = value}
+
+
+    get field09 () { return this.storage[9] }
+    set field09 (value) { this.storage[9] = value}
+}
+
+
+
+//------------------------------------------------------------------------------
 const accessPlain = BenchmarkC<Plain[]>({
     name        : 'Access plain JS',
 
@@ -150,8 +211,11 @@ const accessPlain = BenchmarkC<Plain[]>({
 
 
 //------------------------------------------------------------------------------
+const size = 30000
+
+
 const accessArray = BenchmarkC<ClassAsArray[]>({
-    name        : 'Access plain JS',
+    name        : 'Access class as array',
 
     async setup () {
         const instances = new Array(size)
@@ -181,8 +245,37 @@ const accessArray = BenchmarkC<ClassAsArray[]>({
 
 
 //------------------------------------------------------------------------------
-const size = 30000
+const accessHasArray = BenchmarkC<ClassHasArray[]>({
+    name        : 'Access class has array',
 
+    async setup () {
+        const instances = new Array(size)
+
+        for (let i = 0; i < size; i++) instances[ i ] = new ClassHasArray()
+
+        return instances
+    },
+
+    cycle (iteration : number, cycle : number, state : ClassHasArray[]) {
+        for (let i = 0; i < size; i++) {
+            const instance = state[ i ]
+
+            instance.field00++
+            instance.field01++
+            instance.field02++
+            instance.field03++
+            instance.field04++
+            instance.field05++
+            instance.field06++
+            instance.field07++
+            instance.field08++
+            instance.field09++
+        }
+    }
+})
+
+
+//------------------------------------------------------------------------------
 const instantiatePlain = Benchmark.new({
     name        : 'Instantiate plain class',
     cycle () {
@@ -201,14 +294,24 @@ const instantiateClassAsArray = Benchmark.new({
     }
 })
 
+const instantiateClassHasArray = Benchmark.new({
+    name        : 'Instantiate class with array as storage',
+    cycle () {
+        const instances = new Array(size)
+
+        for (let i = 0; i < size; i++) instances[ i ] = new ClassHasArray()
+    }
+})
 
 //------------------------------------------------------------------------------
 const run = async () => {
     await instantiatePlain.measureTillMaxTime()
     await instantiateClassAsArray.measureTillMaxTime()
+    await instantiateClassHasArray.measureTillMaxTime()
 
     await accessPlain.measureTillMaxTime()
     await accessArray.measureTillMaxTime()
+    await accessHasArray.measureTillMaxTime()
 }
 
 run()
