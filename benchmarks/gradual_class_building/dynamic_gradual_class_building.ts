@@ -284,7 +284,6 @@ const accessEval = Benchmark.new({
         for (let i = 0; i < size; i++) instances[ i ] = new TestClassStringPropertyEval()
 
         return instances
-
     },
 
     cycle (iteration : number, cycle : number, state : TestClassStringPropertyEval[]) {
