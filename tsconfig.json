@@ -1,0 +1,27 @@
+{
+    "compilerOptions" : {
+//        "importHelpers"             : true,
+        "experimentalDecorators"    : true,
+
+        "target"                : "es2017",
+//        "strictNullChecks"      : true,
+
+        "sourceMap"             : false,
+        "lib"                   : [
+            "esnext"
+        ],
+        "module"                : "esnext",
+        "moduleResolution"      : "Node"
+    },
+
+    "include" : [
+        "main.ts",
+        "src/**/*.ts",
+        "tests/**/*.ts",
+        "benchmarks/**/*.ts",
+        "examples/**/*.ts"
+    ],
+
+    "exclude" : [
+    ]
+}
