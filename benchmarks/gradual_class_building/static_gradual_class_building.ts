@@ -1,5 +1,16 @@
 import { Benchmark } from "../../src/benchmark/Benchmark.js"
 
+/*
+
+In this benchmark we create 2 classes, 1st is "monolithic" class with 10 properties.
+
+2nd is build gradually, through the inheritance chain, with 1 property added at every level.
+
+Extracted knowledge: There's no instantiation penalty when building classes "gradually", v8
+is smart enough to optimize it.
+
+*/
+
 class EverythingAtOnce {
     $field00     : number    = 0
     get field00 () { return this.$field00 }
@@ -51,6 +62,7 @@ class EverythingAtOnce {
     set field09 (value) { this.$field09 = value}
 }
 
+//------------------------------------------------------------------------------
 class Base {}
 
 class Test00 extends Base {
@@ -114,6 +126,7 @@ class BuildGradually extends Test08 {
 }
 
 
+//------------------------------------------------------------------------------
 const size = 30000
 
 const instantiateEverythingAtOnce = Benchmark.new({
@@ -135,6 +148,7 @@ const instantiateBuildGradually = Benchmark.new({
 })
 
 
+//------------------------------------------------------------------------------
 const run = async () => {
     await instantiateEverythingAtOnce.measureTillMaxTime()
     await instantiateBuildGradually.measureTillMaxTime()
