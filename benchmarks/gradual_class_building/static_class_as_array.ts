@@ -2,8 +2,10 @@ import { Benchmark, BenchmarkC } from "../../src/benchmark/Benchmark.js"
 
 /*
 
-Extracted knowledge: There's no instantiation penalty when building classes "gradually", v8
-is smart enough to optimize it.
+This benchmarks exercises the idea of using array for properties storage.
+
+Extracted knowledge: The best option is to use pre-filled array, instantiation time is even better
+than the plain class instantiation. The access time is however 2x worse.
 
 */
 
