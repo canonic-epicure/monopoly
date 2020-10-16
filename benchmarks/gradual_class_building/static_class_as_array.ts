@@ -1,4 +1,4 @@
-import { Benchmark } from "../../src/benchmark/Benchmark.js"
+import { Benchmark, BenchmarkC } from "../../src/benchmark/Benchmark.js"
 
 /*
 
@@ -119,10 +119,72 @@ class ClassAsArray extends Array {
 
 
 //------------------------------------------------------------------------------
+const accessPlain = BenchmarkC<Plain[]>({
+    name        : 'Access plain JS',
+
+    async setup () {
+        const instances = new Array(size)
+
+        for (let i = 0; i < size; i++) instances[ i ] = new Plain()
+
+        return instances
+    },
+
+    cycle (iteration : number, cycle : number, state : Plain[]) {
+        for (let i = 0; i < size; i++) {
+            const instance = state[ i ]
+
+            instance.field00++
+            instance.field01++
+            instance.field02++
+            instance.field03++
+            instance.field04++
+            instance.field05++
+            instance.field06++
+            instance.field07++
+            instance.field08++
+            instance.field09++
+        }
+    }
+})
+
+
+//------------------------------------------------------------------------------
+const accessArray = BenchmarkC<ClassAsArray[]>({
+    name        : 'Access plain JS',
+
+    async setup () {
+        const instances = new Array(size)
+
+        for (let i = 0; i < size; i++) instances[ i ] = new ClassAsArray()
+
+        return instances
+    },
+
+    cycle (iteration : number, cycle : number, state : ClassAsArray[]) {
+        for (let i = 0; i < size; i++) {
+            const instance = state[ i ]
+
+            instance.field00++
+            instance.field01++
+            instance.field02++
+            instance.field03++
+            instance.field04++
+            instance.field05++
+            instance.field06++
+            instance.field07++
+            instance.field08++
+            instance.field09++
+        }
+    }
+})
+
+
+//------------------------------------------------------------------------------
 const size = 30000
 
 const instantiatePlain = Benchmark.new({
-    name        : 'Instantiate everything-at-once class',
+    name        : 'Instantiate plain class',
     cycle () {
         const instances = new Array(size)
 
@@ -131,7 +193,7 @@ const instantiatePlain = Benchmark.new({
 })
 
 const instantiateClassAsArray = Benchmark.new({
-    name        : 'Instantiate gradually build class',
+    name        : 'Instantiate class as array',
     cycle () {
         const instances = new Array(size)
 
@@ -144,6 +206,9 @@ const instantiateClassAsArray = Benchmark.new({
 const run = async () => {
     await instantiatePlain.measureTillMaxTime()
     await instantiateClassAsArray.measureTillMaxTime()
+
+    await accessPlain.measureTillMaxTime()
+    await accessArray.measureTillMaxTime()
 }
 
 run()
