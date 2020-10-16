@@ -121,20 +121,24 @@ class ClassAsArray extends Array {
 //------------------------------------------------------------------------------
 class ClassHasArray {
 
-    storage     : number[]      = new Array(10)
+    storage     : number[]      = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+    // storage     : number[]      = new Array(10)
+    // storage     : number[]      = []
 
-    constructor () {
-        this.storage[ 0 ] = 0
-        this.storage[ 1 ] = 0
-        this.storage[ 2 ] = 0
-        this.storage[ 3 ] = 0
-        this.storage[ 4 ] = 0
-        this.storage[ 5 ] = 0
-        this.storage[ 6 ] = 0
-        this.storage[ 7 ] = 0
-        this.storage[ 8 ] = 0
-        this.storage[ 9 ] = 0
-    }
+    // constructor () {
+    //     const storage = this.storage
+    //
+    //     storage[ 0 ] = 0
+    //     storage[ 1 ] = 0
+    //     storage[ 2 ] = 0
+    //     storage[ 3 ] = 0
+    //     storage[ 4 ] = 0
+    //     storage[ 5 ] = 0
+    //     storage[ 6 ] = 0
+    //     storage[ 7 ] = 0
+    //     storage[ 8 ] = 0
+    //     storage[ 9 ] = 0
+    // }
 
 
     get field00 () { return this.storage[0] }
