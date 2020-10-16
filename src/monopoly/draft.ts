@@ -15,7 +15,7 @@ const DataType0VTable = {
     prop0_3         : (host : DataType0) => host.prop0_3,
     prop0_4         : (host : DataType0) => host.prop0_4,
 
-    prop1_0_w       : (host : DataType1, value) => host.prop1_0 = value,
+    prop1_0_w       : (host : DataType1, value) => { throw "oops" },
     prop1_1_w       : (host : DataType1, value) => host.prop1_1 = value,
 
     prop1_0         : (host : DataType1) => host.prop1_0,
