@@ -217,6 +217,7 @@ const instantiate = BenchmarkC({
 });
 //------------------------------------------------------------------------------
 const access = BenchmarkC({
+    // profile : true,
     name: 'Access monopoly',
     async setup() {
         return generate();
@@ -234,7 +235,7 @@ const access = BenchmarkC({
     }
 });
 const run = async () => {
-    // await instantiate.measureTillMaxTime()
+    await instantiate.measureTillMaxTime()
     await access.measureTillMaxTime();
 };
 run();

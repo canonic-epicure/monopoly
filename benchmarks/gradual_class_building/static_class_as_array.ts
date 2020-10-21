@@ -58,6 +58,12 @@ class Plain {
     $field09     : number    = 0
     get field09 () { return this.$field09 }
     set field09 (value) { this.$field09 = value}
+
+
+    abc     : any    = abc
+    // get field09 () { return this.$field09 }
+    // set field09 (value) { this.$field09 = value}
+
 }
 
 //------------------------------------------------------------------------------
@@ -121,26 +127,30 @@ class ClassAsArray extends Array {
 
 
 //------------------------------------------------------------------------------
+const abc = { abc : 11 }
+
 class ClassHasArray {
 
-    storage     : number[]      = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+    storage     : number[]      = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, null ]
     // storage     : number[]      = new Array(10)
     // storage     : number[]      = []
 
-    // constructor () {
-    //     const storage = this.storage
-    //
-    //     storage[ 0 ] = 0
-    //     storage[ 1 ] = 0
-    //     storage[ 2 ] = 0
-    //     storage[ 3 ] = 0
-    //     storage[ 4 ] = 0
-    //     storage[ 5 ] = 0
-    //     storage[ 6 ] = 0
-    //     storage[ 7 ] = 0
-    //     storage[ 8 ] = 0
-    //     storage[ 9 ] = 0
-    // }
+    constructor () {
+        const storage = this.storage
+
+        storage[ 10 ] = abc
+
+        // storage[ 0 ] = 0
+        // storage[ 1 ] = 0
+        // storage[ 2 ] = 0
+        // storage[ 3 ] = 0
+        // storage[ 4 ] = 0
+        // storage[ 5 ] = 0
+        // storage[ 6 ] = 0
+        // storage[ 7 ] = 0
+        // storage[ 8 ] = 0
+        // storage[ 9 ] = 0
+    }
 
 
     get field00 () { return this.storage[0] }
@@ -312,12 +322,12 @@ const instantiateClassHasArray = Benchmark.new({
 //------------------------------------------------------------------------------
 const run = async () => {
     await instantiatePlain.measureTillMaxTime()
-    await instantiateClassAsArray.measureTillMaxTime()
+    // await instantiateClassAsArray.measureTillMaxTime()
     await instantiateClassHasArray.measureTillMaxTime()
 
-    await accessPlain.measureTillMaxTime()
-    await accessArray.measureTillMaxTime()
-    await accessHasArray.measureTillMaxTime()
+    // await accessPlain.measureTillMaxTime()
+    // await accessArray.measureTillMaxTime()
+    // await accessHasArray.measureTillMaxTime()
 }
 
 run()
