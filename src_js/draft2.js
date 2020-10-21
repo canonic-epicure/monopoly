@@ -2,13 +2,13 @@ const d0    = {}
 d0.prop0    = 1
 
 const d1    = {}
-d1.prop0    = 1
-d1.prop1    = 1
+// d1.prop0    = 1
+// d1.prop1    = 1
 
 const d2    = {}
-d2.prop0    = 1
-d2.prop1    = 1
-d2.prop2    = 1
+// d2.prop0    = 1
+// d2.prop1    = 1
+// d2.prop2    = 1
 
 const d3    = {}
 d3.prop0    = 1
@@ -34,3 +34,4 @@ access(d1);
 access(d2);
 access(d3);
 access(d4);
+
