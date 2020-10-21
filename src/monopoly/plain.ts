@@ -1,12 +1,28 @@
 import { Benchmark, BenchmarkC } from "../benchmark/Benchmark.js"
 
 //------------------------------------------------------------------------------
+const abc = { abc : 11 }
+
 class DataType0 {
+    vtable      : any         = abc
+
     prop0_0       : number    = 0
     prop0_1       : number    = 0
     prop0_2       : number    = 0
     prop0_3       : number    = 0
     prop0_4       : number    = 0
+
+    prop10_0       : any    = false
+    prop10_1       : any    = 0
+    prop10_2       : any    = 'abc'
+    prop10_3       : any    = 0
+    prop10_4       : any    = undefined
+
+    prop11_0       : any    = true
+    prop11_1       : any    = 0
+    prop11_2       : any    = 'zxc'
+    prop11_3       : any    = null
+    prop11_4       : any    = 0
 
     sum () : number {
         return this.prop0_0 + this.prop0_1 + this.prop0_2 + this.prop0_3 + this.prop0_4
