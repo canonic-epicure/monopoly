@@ -1,5 +1,5 @@
-import { Benchmark, BenchmarkC } from "../benchmark/Benchmark.js"
-import { AnyConstructor } from "../class/Mixin.js"
+import { Benchmark, BenchmarkC } from "../src/benchmark/Benchmark.js"
+import { AnyConstructor } from "../src/class/Mixin.js"
 
 //------------------------------------------------------------------------------
 const DataType0VTable = {

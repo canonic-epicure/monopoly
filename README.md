@@ -3,6 +3,9 @@ Project Monopoly
 
 Writing the **poly**morphic JavaScript code that executes at **mono**morphic speed.
 
+Better JavaScript polymorphism, in user-space.
+
+
 
 Motivation
 ========== 
