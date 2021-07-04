@@ -18,13 +18,17 @@ const DataType0VTable = {
     prop4_0: DOES_NOT_EXIST,
     prop4_1: DOES_NOT_EXIST,
 };
-const DataType0 = function () {
-    this[ 0 ] = DataType0VTable
-    this[ 1 ] = 0
-    this[ 2 ] = 0
-    this[ 3 ] = 0
-    this[ 4 ] = 0
-    this[ 5 ] = 0
+class DataType0 extends Array {
+    constructor () {
+        super()
+
+        this[ 0 ] = DataType0VTable
+        this[ 1 ] = 0
+        this[ 2 ] = 0
+        this[ 3 ] = 0
+        this[ 4 ] = 0
+        this[ 5 ] = 0
+    }
     // return { 0 : DataType0VTable, 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0 }
 }
 // DataType0.prototype = function () { return DataType0VTable }
@@ -44,13 +48,17 @@ const DataType1VTable = {
     prop4_0: DOES_NOT_EXIST,
     prop4_1: DOES_NOT_EXIST,
 };
-const DataType1 = function () {
-    this[ 0 ] = DataType1VTable
-    this[ 1 ] = 0
-    this[ 2 ] = 0
-    this[ 3 ] = 0
-    this[ 4 ] = 0
-    this[ 5 ] = 0
+class DataType1 extends Array {
+    constructor () {
+        super()
+
+        this[ 0 ] = DataType1VTable
+        this[ 1 ] = 0
+        this[ 2 ] = 0
+        this[ 3 ] = 0
+        this[ 4 ] = 0
+        this[ 5 ] = 0
+    }
     // return { 0 : DataType1VTable, 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0 }
 }
 // DataType1.prototype = function () { return DataType1VTable }
@@ -70,13 +78,17 @@ const DataType2VTable = {
     prop4_0: DOES_NOT_EXIST,
     prop4_1: DOES_NOT_EXIST,
 };
-const DataType2 = function () {
-    this[ 0 ] = DataType2VTable
-    this[ 1 ] = 0
-    this[ 2 ] = 0
-    this[ 3 ] = 0
-    this[ 4 ] = 0
-    this[ 5 ] = 0
+class DataType2 extends Array {
+    constructor () {
+        super()
+
+        this[ 0 ] = DataType2VTable
+        this[ 1 ] = 0
+        this[ 2 ] = 0
+        this[ 3 ] = 0
+        this[ 4 ] = 0
+        this[ 5 ] = 0
+    }
     // return { 0 : DataType2VTable, 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0 }
 }
 // DataType2.prototype = function () { return DataType2VTable }
@@ -96,13 +108,17 @@ const DataType3VTable = {
     prop4_0: DOES_NOT_EXIST,
     prop4_1: DOES_NOT_EXIST,
 };
-const DataType3 = function () {
-    this[ 0 ] = DataType3VTable
-    this[ 1 ] = 0
-    this[ 2 ] = 0
-    this[ 3 ] = 0
-    this[ 4 ] = 0
-    this[ 5 ] = 0
+class DataType3 extends Array {
+    constructor () {
+        super()
+
+        this[ 0 ] = DataType3VTable
+        this[ 1 ] = 0
+        this[ 2 ] = 0
+        this[ 3 ] = 0
+        this[ 4 ] = 0
+        this[ 5 ] = 0
+    }
     // return { 0 : DataType3VTable, 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0 }
 }
 // DataType3.prototype = function () { return DataType3VTable }
@@ -122,13 +138,17 @@ const DataType4VTable = {
     prop4_0: 6,
     prop4_1: 7,
 };
-const DataType4 = function () {
-    this[ 0 ] = DataType4VTable
-    this[ 1 ] = 0
-    this[ 2 ] = 0
-    this[ 3 ] = 0
-    this[ 4 ] = 0
-    this[ 5 ] = 0
+class DataType4 extends Array {
+    constructor () {
+        super()
+
+        this[ 0 ] = DataType4VTable
+        this[ 1 ] = 0
+        this[ 2 ] = 0
+        this[ 3 ] = 0
+        this[ 4 ] = 0
+        this[ 5 ] = 0
+    }
     // return { 0 : DataType4VTable, 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0 }
 }
 // DataType4.prototype = function () { return DataType4VTable }
@@ -137,16 +157,16 @@ const size = 30000;
 const generate = () => {
     const instances = [];
     do {
-        instances.push(new DataType0());
-        instances.push(new DataType1());
-        instances.push(new DataType2());
-        instances.push(new DataType3());
-        instances.push(new DataType4());
-        // instances.push([ DataType0VTable, 0, 0, 0, 0 ]);
-        // instances.push([ DataType1VTable, 0, 0, 0, 0, 0, 0 ]);
-        // instances.push([ DataType1VTable, 0, 0, 0, 0, 0, 0 ]);
-        // instances.push([ DataType1VTable, 0, 0, 0, 0, 0, 0 ]);
-        // instances.push([ DataType1VTable, 0, 0, 0, 0, 0, 0 ]);
+        // instances.push(new DataType0());
+        // instances.push(new DataType1());
+        // instances.push(new DataType2());
+        // instances.push(new DataType3());
+        // instances.push(new DataType4());
+        instances.push([ DataType0VTable, 0, 0, 0, 0, 0]);
+        instances.push([ DataType1VTable, 0, 0, 0, 0, 0, 0 ]);
+        instances.push([ DataType1VTable, 0, 0, 0, 0, 0, 0 ]);
+        instances.push([ DataType1VTable, 0, 0, 0, 0, 0, 0 ]);
+        instances.push([ DataType1VTable, 0, 0, 0, 0, 0, 0 ]);
     } while (instances.length < size);
     return instances;
 };

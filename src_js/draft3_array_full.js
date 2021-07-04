@@ -20,7 +20,7 @@ const DataType0VTable = {
     prop4_1: DOES_NOT_EXIST,
 };
 const DataType0 = function () {
-    return [ DataType0VTable, 0, 0, 0, 0, 0, false, 0, 'abc', 0, undefined, true, 0, 'zxc', null, 0 ]
+    return [ DataType0VTable, 0, 0, 0, 0, 0/*, false, 0, 'abc', 0, undefined, true, 0, 'zxc', null, 0*/ ]
 }
 // DataType0.prototype = function () { return DataType0VTable }
 //------------------------------------------------------------------------------
@@ -40,7 +40,7 @@ const DataType1VTable = {
     prop4_1: DOES_NOT_EXIST,
 };
 const DataType1 = function () {
-    return [ DataType1VTable, 0, 0, 0, 0, 0, false, 0, 'abc', 0, undefined, true, 0, 'zxc', null, 0, 0, 0 ]
+    return [ DataType1VTable, 0, 0, 0, 0, 0, false, 0/*, 'abc', 0, undefined, true, 0, 'zxc', null, 0, 0, 0*/ ]
 }
 // DataType1.prototype = function () { return DataType1VTable }
 //------------------------------------------------------------------------------
@@ -60,7 +60,7 @@ const DataType2VTable = {
     prop4_1: DOES_NOT_EXIST,
 };
 const DataType2 = function () {
-    return [ DataType2VTable, 0, 0, 0, 0, 0, false, 0, 'abc', 0, undefined, true, 0, 'zxc', null, 0, 0, 0 ]
+    return [ DataType2VTable, 0, 0, 0, 0, 0, false, 0/*, 'abc', 0, undefined, true, 0, 'zxc', null, 0, 0, 0*/ ]
 }
 // DataType2.prototype = function () { return DataType2VTable }
 //------------------------------------------------------------------------------
@@ -80,7 +80,7 @@ const DataType3VTable = {
     prop4_1: DOES_NOT_EXIST,
 };
 const DataType3 = function () {
-    return [ DataType3VTable, 0, 0, 0, 0, 0, false, 0, 'abc', 0, undefined, true, 0, 'zxc', null, 0, 0, 0 ]
+    return [ DataType3VTable, 0, 0, 0, 0, 0, false, 0/*, 'abc', 0, undefined, true, 0, 'zxc', null, 0, 0, 0*/ ]
 }
 // DataType3.prototype = function () { return DataType3VTable }
 //------------------------------------------------------------------------------
@@ -100,7 +100,7 @@ const DataType4VTable = {
     prop4_1: 7,
 };
 const DataType4 = function () {
-    return [ DataType4VTable, 0, 0, 0, 0, 0, false, 0, 'abc', 0, undefined, true, 0, 'zxc', null, 0, 0, 0 ]
+    return [ DataType4VTable, 0, 0, 0, 0, 0, false, 0/*, 'abc', 0, undefined, true, 0, 'zxc', null, 0, 0, 0*/ ]
 }
 // DataType4.prototype = function () { return DataType4VTable }
 //------------------------------------------------------------------------------

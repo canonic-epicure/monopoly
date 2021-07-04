@@ -39,7 +39,7 @@ const DataType1VTable = {
     prop4_1: DOES_NOT_EXIST,
 };
 const DataType1 = function () {
-    this.storage = [ 0, 0, 0, 0, 0, 0 ]
+    this.storage = [ 0, 0, 0, 0, 0, false, '0' ]
 }
 DataType1.prototype = function () { return DataType1VTable }
 //------------------------------------------------------------------------------
@@ -59,7 +59,7 @@ const DataType2VTable = {
     prop4_1: DOES_NOT_EXIST,
 };
 const DataType2 = function () {
-    this.storage = [ 0, 0, 0, 0, 0, 0 ]
+    this.storage = [ 0, 0, 0, 0, 0, false, '0' ]
 }
 DataType2.prototype = function () { return DataType2VTable }
 //------------------------------------------------------------------------------
@@ -79,7 +79,7 @@ const DataType3VTable = {
     prop4_1: DOES_NOT_EXIST,
 };
 const DataType3 = function () {
-    this.storage = [ 0, 0, 0, 0, 0, 0 ]
+    this.storage = [ 0, 0, 0, 0, 0, false, '0' ]
 }
 DataType3.prototype = function () { return DataType3VTable }
 //------------------------------------------------------------------------------
@@ -99,7 +99,7 @@ const DataType4VTable = {
     prop4_1: 6,
 };
 const DataType4 = function () {
-    this.storage = [ 0, 0, 0, 0, 0, 0 ]
+    this.storage = [ 0, 0, 0, 0, 0, false, '0' ]
 }
 DataType4.prototype = function () { return DataType4VTable }
 //------------------------------------------------------------------------------

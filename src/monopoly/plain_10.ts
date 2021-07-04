@@ -12,6 +12,12 @@ class DataType0 {
     prop0_3       : number    = 0
     prop0_4       : number    = 0
 
+    crop0_0       : number    = 0
+    crop0_1       : number    = 0
+    crop0_2       : number    = 0
+    crop0_3       : number    = 0
+    crop0_4       : number    = 0
+
     // prop10_0       : any    = false
     // prop10_1       : any    = 0
     // prop10_2       : any    = 'abc'
@@ -111,6 +117,12 @@ const access = BenchmarkC<DataType0[]>({
             instance.prop0_2 = instance.prop0_2 + 3
             instance.prop0_3 = instance.prop0_3 + 3
             instance.prop0_4 = instance.prop0_4 + 3
+
+            instance.crop0_0 = instance.crop0_0 + 3
+            instance.crop0_1 = instance.crop0_1 + 3
+            instance.crop0_2 = instance.crop0_2 + 3
+            instance.crop0_3 = instance.crop0_3 + 3
+            instance.crop0_4 = instance.crop0_4 + 3
         }
     }
 })
