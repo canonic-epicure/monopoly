@@ -214,6 +214,8 @@ export class Benchmark<StateT, InfoT = any> extends Base {
         while (condition(samples, i, performance.now() - globalStart)) {
             if (this.coolDownTimeout > 0) await new Promise(resolve => setTimeout(resolve, this.coolDownTimeout))
 
+            await this.clearGarbage()
+
             const start     = performance.now()
 
             for (let c = 0; c < cyclesCount; c++) {

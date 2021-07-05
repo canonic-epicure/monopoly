@@ -28,6 +28,10 @@ class DataType0 {
 const size = 30000;
 
 const generateObject = () => {
+    // let ref
+    //
+    // for (let i = 0; i < size; i++) ref = new DataType0()
+
     const instances = [];
     do {
         instances.push(new DataType0());
@@ -44,6 +48,27 @@ const instantiateObject = BenchmarkC({
 
 //------------------------------------------------------------------------------
 const generateArray = () => {
+    // let ref
+    //
+    // for (let i = 0; i < size; i++)
+    //     ref = [
+    //         object,
+    //         0,
+    //         '0',
+    //         false,
+    //         true,
+    //         object,
+    //         0,
+    //         'true',
+    //         false,
+    //         0,
+    //         0,
+    //         0,
+    //         0,
+    //         0,
+    //         0,
+    //         0,
+    //     ]
     const instances = [];
     do {
         instances.push([
