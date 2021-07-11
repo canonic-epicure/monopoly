@@ -81,7 +81,7 @@ const generate = () => {
         instances.push(new DataType1())
         instances.push(new DataType2())
         instances.push(new DataType3())
-        instances.push(new DataType4())
+        // instances.push(new DataType4())
     } while (instances.length < size)
 
     return instances
@@ -104,7 +104,10 @@ const access = BenchmarkC<DataType0[]>({
 
     cycle (iteration : number, cycle : number, state : DataType0[]) {
         for (let i = 0; i < size; i++) {
-            const instance = state[ i ]
+            const
+                instance = state[ i ],
+                instance_vtable = instance[ 0 ]
+
 
             instance.prop0_0 = instance.prop0_0 + 3
             instance.prop0_1 = instance.prop0_1 + 3

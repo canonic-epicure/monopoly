@@ -138,13 +138,13 @@ const access = BenchmarkC({
         for (let i = 0; i < size; i++) {
             const instance  = state[i];
             const storage   = instance;
+            // const vtable    = instance[0];
 
-            const vtable    = instance[0];
-            storage[ vtable.prop0_0 ] = storage[ vtable.prop0_0 ] + 3
-            storage[ vtable.prop0_1 ] = storage[ vtable.prop0_1 ] + 3
-            storage[ vtable.prop0_2 ] = storage[ vtable.prop0_2 ] + 3
-            storage[ vtable.prop0_3 ] = storage[ vtable.prop0_3 ] + 3
-            storage[ vtable.prop0_4 ] = storage[ vtable.prop0_4 ] + 3
+            storage[ 1 ] = storage[ 1 ] + 3
+            storage[ 2 ] = storage[ 2 ] + 3
+            storage[ 3 ] = storage[ 3 ] + 3
+            storage[ 4 ] = storage[ 4 ] + 3
+            storage[ 5 ] = storage[ 5 ] + 3
         }
     }
 });

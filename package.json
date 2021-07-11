@@ -4,6 +4,7 @@
   "description": "Finding a way out of megamorphism",
   "main": "index.js",
   "module": "main.js",
+  "type": "module",
   "scripts": {
     "chrome_bench": "google-chrome-stable --js-flags=\"--expose-gc\" $1",
     "bench": "node --expose-gc -r esm benchmarks/chrono2/suite_everything.js",
